@@ -1,9 +1,9 @@
 # kafka-installation
 
-# Install image
-```docker compose -f docker-compose.yml up -d```
-```docker images```
-
+### Install image
+``docker compose -f docker-compose.yml up -d``
+### Images
+``docker images``
 ### Move into Kafka container
 ```docker exec -it <kafka_conatiner_id> /bin/sh```
 ### Go inside kafka installation folder
@@ -14,11 +14,10 @@
 ```kafka-console-producer.sh --topic quickstart --bootstrap-server localhost:9092```
 ### Start consumer app (CLI)
 ```kafka-console-consumer.sh --topic quickstart --from-beginning --bootstrap-server localhost:9092```
-
-# For save gateway
+### For save gateway
 ```docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' kafka```
 
-# To do MSGO-procesamientoMensajesCargo
+### To do MSGO-procesamientoMensajesCargo
 ``docker exec -it kafka /bin/sh``
 
 ``kafka-console-producer.sh --topic procesamientoMensajesCargo --bootstrap-server localhost:9092``
